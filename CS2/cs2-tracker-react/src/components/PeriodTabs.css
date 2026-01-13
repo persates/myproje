@@ -1,0 +1,73 @@
+.period-section {
+  margin-bottom: 30px;
+}
+
+.period-tabs {
+  display: flex;
+  gap: 15px;
+  flex-wrap: wrap;
+  margin-bottom: 16px;
+}
+
+.period-tab {
+  width: 100px;
+  background: var(--bg-card);
+  border: 2px solid transparent;
+  color: var(--text-secondary);
+  padding: 12px 20px;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  font-size: 1rem;
+  font-weight: 700;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.period-tab:hover {
+  background: var(--bg-card-hover);
+  transform: translateY(-2px);
+}
+
+.period-tab.active {
+  background: linear-gradient(135deg, var(--accent-blue), var(--accent-purple));
+  color: white;
+  border-color: var(--accent-purple);
+}
+
+.period-tab .delete-period {
+  background: rgba(239, 68, 68, 0.2);
+  border: none;
+  color: var(--error);
+  padding: 4px 8px;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 0.8rem;
+  margin-left: 5px;
+  transition: all 0.2s ease;
+  margin-left: 20px;
+}
+
+.period-tab .delete-period:hover {
+
+  background: var(--error);
+  color: white;
+}
+
+.new-period-btn {
+  background: var(--success);
+  color: white;
+  border: none;
+  padding: 12px 24px;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 0.95rem;
+  font-weight: 600;
+  transition: all 0.2s ease;
+}
+
+.new-period-btn:hover {
+  transform: scale(1.05);
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.4);
+}

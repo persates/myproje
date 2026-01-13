@@ -1,0 +1,217 @@
+.workspace-selector {
+  position: fixed;
+  left: 20px;
+  top: 20px;
+  z-index: 100;
+}
+
+.workspace-buttons {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.workspace-btn {
+  display: inline-block;
+  width: 150px;
+  height: 50px;
+  border-radius: 10px;
+  border: 1px solid #03045e;
+  position: relative;
+  overflow: hidden;
+  transition: all 0.5s ease-in;
+  z-index: 1;
+  cursor: pointer;
+  background: transparent;
+}
+
+.workspace-btn::before,
+.workspace-btn::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  width: 0;
+  height: 100%;
+  transform: skew(15deg);
+  transition: all 0.5s;
+  overflow: hidden;
+  z-index: -1;
+}
+
+.workspace-btn::before {
+  left: -10px;
+  background: #580ca0;
+}
+
+.workspace-btn::after {
+  right: -10px;
+  background: #445300;
+}
+
+.workspace-btn:hover::before,
+.workspace-btn:hover::after {
+  width: 58%;
+}
+
+.workspace-btn:hover span {
+  color: #e0aaff;
+  transition: 0.3s;
+}
+
+.workspace-btn span {
+  color: #ffffff;
+  font-size: 18px;
+  transition: all 0.3s ease-in;
+  font-weight: 600;
+}
+
+.workspace-btn.active {
+  border-color: #ffffff;
+}
+
+.workspace-btn.active::before,
+.workspace-btn.active::after {
+  width: 58%;
+}
+
+.workspace-btn.active span {
+  color: #ffffff;
+}
+
+.comparison-btn {
+  position: fixed;
+  right: 20px;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 60px;
+  height: 60px;
+  border-radius: 12px;
+  border: 2px solid var(--accent-blue);
+  background: linear-gradient(135deg, var(--accent-blue), var(--accent-purple));
+  cursor: pointer;
+  font-size: 28px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 20px rgba(59, 130, 246, 0.4);
+  z-index: 100;
+}
+
+.comparison-btn:hover {
+  transform: translateY(-50%) scale(1.1);
+  box-shadow: 0 6px 25px rgba(59, 130, 246, 0.6);
+}
+
+.comparison-modal-simple {
+  min-width: 700px;
+  max-width: 800px;
+}
+
+.comparison-simple {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 30px;
+  padding: 40px 20px;
+  flex-wrap: wrap;
+}
+
+.workspace-total {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+  padding: 30px;
+  background: var(--bg-secondary);
+  border-radius: 16px;
+  border: 2px solid var(--border);
+  min-width: 200px;
+}
+
+.workspace-label-big {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: var(--accent-blue);
+}
+
+.workspace-value-big {
+  font-size: 2rem;
+  font-weight: 800;
+  color: var(--text-primary);
+}
+
+.workspace-subtitle {
+  font-size: 0.9rem;
+  color: var(--text-secondary);
+  text-align: center;
+}
+
+.comparison-operator,
+.comparison-equals {
+  font-size: 3rem;
+  font-weight: 700;
+  color: var(--text-secondary);
+}
+
+.difference-total {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 15px;
+  padding: 40px;
+  background: linear-gradient(135deg, var(--accent-blue), var(--accent-purple));
+  border-radius: 20px;
+  min-width: 250px;
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.3);
+}
+
+.difference-big {
+  font-size: 2.5rem;
+  font-weight: 900;
+  text-align: center;
+}
+
+.difference-big.profit {
+  color: #10b981;
+}
+
+.difference-big.loss {
+  color: #ef4444;
+}
+
+.difference-subtitle {
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: white;
+  text-align: center;
+}
+
+@media (max-width: 768px) {
+  .workspace-selector {
+    left: 10px;
+    top: 10px;
+  }
+
+  .workspace-buttons {
+    gap: 10px;
+  }
+
+  .workspace-btn {
+    width: 120px;
+    height: 45px;
+    font-size: 1rem;
+  }
+
+  .comparison-btn {
+    width: 50px;
+    height: 50px;
+    font-size: 24px;
+    right: 10px;
+  }
+
+  .comparison-modal {
+    min-width: 90%;
+    max-width: 95%;
+  }
+}
