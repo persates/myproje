@@ -1,7 +1,10 @@
 # CS2 Trading Tracker - React Uygulaması
 
 Counter-Strike 2 item trade takip uygulaması. React ile geliştirilmiştir ve localStorage kullanarak verileri otomatik olarak kaydeder.
-KLOSERDE BULUNAN watch-me.mp4 izlemenizi tavsiye ederim
+
+🎥 Projeyi daha iyi incelemek için aşağıdaki videoyu indirip izlemenizi tavsiye ederim:
+[Watch the video](https://github.com/persates/myproje/blob/main/CS2/watch-me.mp4)
+
 
 ## 🚀 Özellikler
 
