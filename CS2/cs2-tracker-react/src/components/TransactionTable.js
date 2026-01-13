@@ -283,21 +283,20 @@ const TransactionTable = () => {
             <h3>İşlemi Düzenle</h3>
             <form onSubmit={handleEditSubmit}>
               <div className="form-group mb-20">
-                <label htmlFor="editItemName">Eşya Adı *</label>
+                <label htmlFor="editItemName">Eşya Adı</label>
                 <input
                   type="text"
                   id="editItemName"
                   name="itemName"
                   value={editFormData.itemName}
                   onChange={handleEditChange}
-                  required
                 />
               </div>
               {activeWorkspace === 1 ? (
                 <>
                   <div className="form-grid">
                     <div className="form-group">
-                      <label htmlFor="editDollarRate">Dolar Kuru *</label>
+                      <label htmlFor="editDollarRate">Dolar Kuru</label>
                       <input
                         type="number"
                         id="editDollarRate"
@@ -306,11 +305,10 @@ const TransactionTable = () => {
                         onChange={handleEditChange}
                         step="0.01"
                         min="0"
-                        required
                       />
                     </div>
                     <div className="form-group">
-                      <label htmlFor="editBynogameBuyPrice">Bynogame Alış *</label>
+                      <label htmlFor="editBynogameBuyPrice">Bynogame Alış</label>
                       <input
                         type="number"
                         id="editBynogameBuyPrice"
@@ -319,14 +317,13 @@ const TransactionTable = () => {
                         onChange={handleEditChange}
                         step="0.01"
                         min="0"
-                        required
                       />
                     </div>
                   </div>
                   <div className="form-grid">
                     <div className="form-group">
                       <label htmlFor="editEstimatedSteamPrice">
-                        Tahmini Steam *
+                        Tahmini Steam
                         <span className="info-icon" title="Steam %87'si hesaplanacaktır">⚠️</span>
                       </label>
                       <input
@@ -337,7 +334,6 @@ const TransactionTable = () => {
                         onChange={handleEditChange}
                         step="0.01"
                         min="0"
-                        required
                       />
                       {editFormData.estimatedSteamPrice && (
                         <small className="helper-text">
@@ -371,7 +367,7 @@ const TransactionTable = () => {
                 <>
                   <div className="form-grid">
                     <div className="form-group">
-                      <label htmlFor="editQuantity">Adet *</label>
+                      <label htmlFor="editQuantity">Adet</label>
                       <input
                         type="number"
                         id="editQuantity"
@@ -380,11 +376,10 @@ const TransactionTable = () => {
                         onChange={handleEditChange}
                         step="1"
                         min="1"
-                        required
                       />
                     </div>
                     <div className="form-group">
-                      <label htmlFor="editSteamBuyPrice">Steam Alış Fiyat *</label>
+                      <label htmlFor="editSteamBuyPrice">Steam Alış Fiyat</label>
                       <input
                         type="number"
                         id="editSteamBuyPrice"
@@ -393,13 +388,12 @@ const TransactionTable = () => {
                         onChange={handleEditChange}
                         step="0.01"
                         min="0"
-                        required
                       />
                     </div>
                   </div>
                   <div className="form-grid">
                     <div className="form-group">
-                      <label htmlFor="editEstimatedCSFSellPrice">Tahmini CSF Satış *</label>
+                      <label htmlFor="editEstimatedCSFSellPrice">Tahmini CSF Satış</label>
                       <input
                         type="number"
                         id="editEstimatedCSFSellPrice"
@@ -408,7 +402,6 @@ const TransactionTable = () => {
                         onChange={handleEditChange}
                         step="0.01"
                         min="0"
-                        required
                       />
                       {editFormData.estimatedCSFSellPrice && editFormData.steamBuyPrice && (
                         <small className="helper-text">
@@ -437,14 +430,13 @@ const TransactionTable = () => {
                 </>
               )}
               <div className="form-group mb-20">
-                <label htmlFor="editDate">Tarih *</label>
+                <label htmlFor="editDate">Tarih</label>
                 <input
                   type="date"
                   id="editDate"
                   name="date"
                   value={editFormData.date}
                   onChange={handleEditChange}
-                  required
                 />
               </div>
               <div className="form-group mb-20">

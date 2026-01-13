@@ -269,17 +269,20 @@ export const AppProvider = ({ children }) => {
     };
 
     if (activeWorkspace === 1) {
-      // Workspace 1: Bynogame trading (ESKİ MANTIK)
+      // Workspace 1: Bynogame trading - Sadece Gerçek Satış olanları kullan
       transactions.forEach(t => {
         stats.totalBuy += t.bynogameBuyPrice || 0;
         const profit = t.actualProfit !== null ? t.actualProfit : t.targetProfit || 0;
         stats.totalSell += (t.actualProfit !== null ? t.actualSellNet : t.estimatedSteamNet) || 0;
 
-        if (!stats.mostProfitable || profit > (stats.mostProfitable.actualProfit !== null ? stats.mostProfitable.actualProfit : stats.mostProfitable.targetProfit || 0)) {
-          stats.mostProfitable = t;
-        }
-        if (!stats.leastProfitable || profit < (stats.leastProfitable.actualProfit !== null ? stats.leastProfitable.actualProfit : stats.leastProfitable.targetProfit || 0)) {
-          stats.leastProfitable = t;
+        // En kârlı ve en az kârlı sadece Gerçek Satış (actualProfit) olanlardan hesaplanır
+        if (t.actualProfit !== null) {
+          if (!stats.mostProfitable || t.actualProfit > (stats.mostProfitable.actualProfit || 0)) {
+            stats.mostProfitable = t;
+          }
+          if (!stats.leastProfitable || t.actualProfit < (stats.leastProfitable.actualProfit || 0)) {
+            stats.leastProfitable = t;
+          }
         }
       });
     } else {

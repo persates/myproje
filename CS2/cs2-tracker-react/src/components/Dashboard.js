@@ -9,7 +9,7 @@ const Dashboard = () => {
 
   if (!stats) return null;
 
-  const currency = stats.transactionCount > 0 ? stats.mostProfitable?.currency || 'TL' : '$';
+  const currency = stats.transactionCount > 0 ? stats.mostProfitable?.currency || 'USD' : 'USD';
   const currencySymbol = getCurrencySymbol(currency);
 
   return (
@@ -38,7 +38,7 @@ const Dashboard = () => {
           <div className="stat-value positive">
             {formatCurrency(
               activeWorkspace === 1 
-                ? (stats.mostProfitable.actualProfit !== null ? stats.mostProfitable.actualProfit : stats.mostProfitable.targetProfit)
+                ? (stats.mostProfitable.actualProfit || 0)
                 : (stats.mostProfitable._calculatedProfit || 0),
               getCurrencySymbol(stats.mostProfitable.currency)
             )}

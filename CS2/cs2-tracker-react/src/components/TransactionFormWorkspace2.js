@@ -61,7 +61,7 @@ const TransactionFormWorkspace2 = () => {
         <form onSubmit={handleSubmit}>
           <div className="form-grid">
             <div className="form-group">
-              <label htmlFor="quantity">Adet *</label>
+              <label htmlFor="quantity">Adet</label>
               <input
                 type="number"
                 id="quantity"
@@ -70,24 +70,22 @@ const TransactionFormWorkspace2 = () => {
                 onChange={handleChange}
                 step="1"
                 min="1"
-                required
                 placeholder="örn: 5"
               />
             </div>
             <div className="form-group">
-              <label htmlFor="itemName">Item Adı *</label>
+              <label htmlFor="itemName">Item Adı</label>
               <input
                 type="text"
                 id="itemName"
                 name="itemName"
                 value={formData.itemName}
                 onChange={handleChange}
-                required
                 placeholder="örn: AK-47 | Redline"
               />
             </div>
             <div className="form-group">
-              <label htmlFor="steamBuyPrice">Steam Alış *</label>
+              <label htmlFor="steamBuyPrice">Steam Alış</label>
               <input
                 type="number"
                 id="steamBuyPrice"
@@ -96,12 +94,11 @@ const TransactionFormWorkspace2 = () => {
                 onChange={handleChange}
                 step="0.01"
                 min="0"
-                required
                 placeholder="0.00"
               />
             </div>
             <div className="form-group">
-              <label htmlFor="estimatedCSFSellPrice">Tahmini CSF Satış *</label>
+              <label htmlFor="estimatedCSFSellPrice">Tahmini CSF Satış</label>
               <input
                 type="number"
                 id="estimatedCSFSellPrice"
@@ -110,7 +107,6 @@ const TransactionFormWorkspace2 = () => {
                 onChange={handleChange}
                 step="0.01"
                 min="0"
-                required
                 placeholder="0.00"
               />
               {formData.estimatedCSFSellPrice && formData.steamBuyPrice && (

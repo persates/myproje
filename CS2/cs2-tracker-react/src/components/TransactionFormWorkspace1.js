@@ -61,7 +61,7 @@ const TransactionFormWorkspace1 = () => {
         <form onSubmit={handleSubmit}>
           <div className="form-grid">
             <div className="form-group">
-              <label htmlFor="dollarRate">Dolar Kuru *</label>
+              <label htmlFor="dollarRate">Dolar Kuru</label>
               <input
                 type="number"
                 id="dollarRate"
@@ -70,24 +70,22 @@ const TransactionFormWorkspace1 = () => {
                 onChange={handleChange}
                 step="0.01"
                 min="0"
-                required
                 placeholder="örn: 34.50"
               />
             </div>
             <div className="form-group">
-              <label htmlFor="itemName">Eşya Adı *</label>
+              <label htmlFor="itemName">Eşya Adı</label>
               <input
                 type="text"
                 id="itemName"
                 name="itemName"
                 value={formData.itemName}
                 onChange={handleChange}
-                required
                 placeholder="örn: AK-47 | Redline"
               />
             </div>
             <div className="form-group">
-              <label htmlFor="bynogameBuyPrice">Bynogame Alış Fiyatı *</label>
+              <label htmlFor="bynogameBuyPrice">Bynogame Alış Fiyatı</label>
               <input
                 type="number"
                 id="bynogameBuyPrice"
@@ -96,7 +94,6 @@ const TransactionFormWorkspace1 = () => {
                 onChange={handleChange}
                 step="0.01"
                 min="0"
-                required
                 placeholder="0.00"
               />
             </div>
