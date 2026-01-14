@@ -56,7 +56,7 @@ Uygulama **localStorage** kullanarak tüm verilerinizi tarayıcınızda saklar:
 localStorage verileri tarayıcıya özeldir. Verilerinizi yedeklemek için:
 1. Tarayıcınızın Geliştirici Araçlarını açın (F12)
 2. Application/Depolama sekmesine gidin
-3. Local Storage > http://localhost:3000
+3. Local Storage > http://localhost:7500
 4. `cs2TrackerData` anahtarını bulun ve değerini kopyalayın
 5. Bu veriyi bir metin dosyasına kaydedin
 
