@@ -1,0 +1,150 @@
+.steam-calc-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.85);
+  backdrop-filter: blur(4px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 10000;
+  animation: fadeIn 0.2s ease-out;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+.steam-calc-modal {
+  background: linear-gradient(135deg, #1a1a2e 0%, #16213e 100%);
+  border-radius: 16px;
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.7), 0 0 0 1px rgba(255, 255, 255, 0.1);
+  position: relative;
+  color: #fff;
+  animation: slideUp 0.3s ease-out;
+  max-width: 460px;
+}
+
+@keyframes slideUp {
+  from {
+    transform: translateY(20px);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+.steam-calc-close {
+  position: absolute;
+  top: 15px;
+  right: 15px;
+  background: rgba(255, 255, 255, 0.1);
+  border: none;
+  color: #999;
+  font-size: 24px;
+  cursor: pointer;
+  line-height: 1;
+  padding: 8px 12px;
+  border-radius: 8px;
+  transition: all 0.2s ease;
+}
+
+.steam-calc-close:hover {
+  background: rgba(255, 255, 255, 0.2);
+  color: #fff;
+  transform: rotate(90deg);
+}
+
+.steam-calc-modal h2 {
+  margin-top: 0;
+  margin-bottom: 20px;
+  color: #fff;
+  font-size: 22px;
+  font-weight: 600;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.steam-calc-modal label {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  color: #e0e0e0;
+  margin-bottom: 12px;
+  font-size: 15px;
+  font-weight: 500;
+}
+
+.steam-calc-modal input {
+  width: 70px;
+  padding: 8px 12px;
+  text-align: right;
+  background: rgba(255, 255, 255, 0.05);
+  border: 2px solid rgba(255, 255, 255, 0.1);
+  color: #fff;
+  border-radius: 8px;
+  font-size: 15px;
+  font-weight: 600;
+  transition: all 0.2s ease;
+}
+
+.steam-calc-modal input:hover {
+  border-color: rgba(255, 255, 255, 0.2);
+  background: rgba(255, 255, 255, 0.08);
+}
+
+.steam-calc-modal input:focus {
+  outline: none;
+  border-color: #667eea;
+  background: rgba(102, 126, 234, 0.1);
+  box-shadow: 0 0 0 3px rgba(102, 126, 234, 0.2);
+}
+
+.steam-calc-modal hr {
+  border: none;
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+  margin: 20px 0;
+}
+
+.steam-calc-modal p {
+  color: #fff;
+  margin: 12px 0;
+  font-size: 15px;
+  padding: 10px;
+  background: rgba(255, 255, 255, 0.05);
+  border-radius: 8px;
+  border-left: 3px solid #667eea;
+}
+
+.steam-calc-modal b {
+  color: #4ade80;
+  font-size: 16px;
+  font-weight: 700;
+}
+
+.steam-calc-modal small {
+  color: #999;
+  display: block;
+  margin-top: 15px;
+  font-size: 13px;
+  font-style: italic;
+  padding: 8px;
+  background: rgba(255, 255, 255, 0.03);
+  border-radius: 6px;
+}
+
+/* Workspace 2 için aynı dark tema */
+.workspace-2 .steam-calc-modal {
+  background: linear-gradient(135deg, #1a1a2e 0%, #16213e 100%);
+}

@@ -8,10 +8,12 @@ import TransactionTable from './components/TransactionTable';
 import TotalStats from './components/TotalStats';
 import WorkspaceSelector from './components/WorkspaceSelector';
 import Notepad from './components/Notepad';
+import SteamProfitCalculator from './components/SteamProfitCalculator';
 import './App.css';
 
 function AppContent() {
   const { activeWorkspace } = useApp();
+  const [isCalculatorOpen, setIsCalculatorOpen] = useState(false);
   const [isNotepadOpen, setIsNotepadOpen] = useState(false);
 
   useEffect(() => {
@@ -43,10 +45,25 @@ function AppContent() {
         </svg>
       </button>
 
+      {/* Steam Kâr Hesaplayıcı Butonu */}
+      <button 
+        className="calculator-button" 
+        onClick={() => setIsCalculatorOpen(true)}
+        title="Steam Kâr Hesaplayıcı"
+      >
+        🧠
+      </button>
+
       {/* Not Defteri */}
       <Notepad 
         isOpen={isNotepadOpen} 
         onClose={() => setIsNotepadOpen(false)} 
+      />
+
+      {/* Steam Kâr Hesaplayıcı */}
+      <SteamProfitCalculator 
+        isOpen={isCalculatorOpen} 
+        onClose={() => setIsCalculatorOpen(false)} 
       />
     </div>
   );
